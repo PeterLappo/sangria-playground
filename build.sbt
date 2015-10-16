@@ -5,11 +5,22 @@ version := "1.0-SNAPSHOT"
 
 scalaVersion := "2.11.7"
 
+val tinkerVersion =  "3.0.1-incubating"
+val titanVerson = "1.0.0"
+
 libraryDependencies ++= Seq(
-  "org.sangria-graphql" %% "sangria" % "0.4.1"
+  "com.thinkaurelius.titan" % "titan-cassandra" % titanVerson,
+  "com.thinkaurelius.titan" % "titan-core" % titanVerson,
+  "org.apache.tinkerpop" % "gremlin-core" % tinkerVersion,
+  "org.apache.tinkerpop" % "tinkergraph-gremlin" % tinkerVersion,
+  "com.tinkerpop.gremlin" % "gremlin-scala" % "1.5",
+  "org.sangria-graphql" %% "sangria" % "0.4.1",
+  "org.webjars" % "jquery" % "2.1.4"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
+
+resolvers += "Apache public" at "https://repository.apache.org/content/groups/public/"
 
 routesGenerator := InjectedRoutesGenerator
 
