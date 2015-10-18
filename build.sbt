@@ -15,7 +15,8 @@ libraryDependencies ++= Seq(
   "org.apache.tinkerpop" % "tinkergraph-gremlin" % tinkerVersion,
   "com.tinkerpop.gremlin" % "gremlin-scala" % "1.5",
   "org.sangria-graphql" %% "sangria" % "0.4.1",
-  "org.webjars" % "jquery" % "2.1.4"
+  "org.webjars" % "jquery" % "2.1.4",
+  "org.webjars" % "d3js" % "3.5.6"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"

@@ -38,8 +38,7 @@ object SchemaDefinition {
           resolve = ctx => DeferFriends(ctx.value.friends)),
         Field("appearsIn", OptionType(ListType(OptionType(EpisodeEnum))),
           Some("Which movies they appear in."),
-          resolve = _.value.appearsIn map (e => Some(e)))
-      ))
+          resolve = _.value.appearsIn map (e => Some(e)))))
 
   val Human =
     ObjectType(
@@ -62,8 +61,7 @@ object SchemaDefinition {
           resolve = _.value.appearsIn map (e => Some(e))),
         Field("homePlanet", OptionType(StringType),
           Some("The home planet of the human, or null if unknown."),
-          resolve = _.value.homePlanet)
-      ))
+          resolve = _.value.homePlanet)))
 
   val Droid = ObjectType[Unit, Droid](
     "Droid",
@@ -85,8 +83,7 @@ object SchemaDefinition {
         resolve = _.value.appearsIn map (e => Some(e))),
       Field("primaryFunction", OptionType(StringType),
         Some("The primary function of the droid."),
-        resolve = _.value.primaryFunction)
-    ))
+        resolve = _.value.primaryFunction)))
 
   val ID = Argument("id", StringType, description = "id of the character")
 
@@ -103,8 +100,7 @@ object SchemaDefinition {
         resolve = ctx => ctx.ctx.getHuman(ctx arg ID)),
       Field("droid", Droid,
         arguments = ID :: Nil,
-        resolve = Projector((ctx, f) => ctx.ctx.getDroid(ctx arg ID).get))
-    ))
+        resolve = Projector((ctx, f) => ctx.ctx.getDroid(ctx arg ID).get))))
 
   val StarWarsSchema = Schema(Query)
 }

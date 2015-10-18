@@ -4,6 +4,7 @@
 
 # Home page
 GET        /                     controllers.Application.index
+GET        /d3demo               controllers.Application.d3demo
 GET        /graphql              controllers.Application.graphql(query: String, variables: Option[String], operation: Option[String])
 POST       /graphql              controllers.Application.graphqlBody
 GET        /render-schema        controllers.Application.renderSchema

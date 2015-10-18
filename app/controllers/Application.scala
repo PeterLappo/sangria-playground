@@ -25,6 +25,10 @@ class Application @Inject() (system: ActorSystem) extends Controller {
     Ok(views.html.index())
   }
 
+  def d3demo = Action {
+    Ok(views.html.d3demo())
+  }
+
   def graphiql = Action {
     Ok(views.html.graphiql())
   }
