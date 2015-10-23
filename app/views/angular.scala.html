@@ -1,0 +1,33 @@
+@base("Angular Demo") {
+
+<div class="container">
+	<div class="jumbotron">
+		<h1>Angular Demo</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 panel panel-default">
+			<p>Graph Demo</p>
+		</div>
+		<div class="col-md-6 panel panel-default">
+			<div class="thegraph"></div>
+		</div>
+		<div class="col-md-3 panel panel-default">
+			Vertex details
+			<form role="form">
+				<div class="form-group">
+					<label for="v_name">Name:</label> 
+					<input type="text" class="form-control" id="v_name"></input>
+				</div>
+				<div class="form-group">
+					<label for="v_index">Index:</label> 
+					<input type="text" class="form-control" id="v_index"></input>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="@routes.Assets.versioned("app/app.js")"></script>
+
+}
