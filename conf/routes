@@ -11,6 +11,8 @@ POST       /graphql              controllers.Application.graphqlBody
 GET        /render-schema        controllers.Application.renderSchema
 GET        /graphiql             controllers.Application.graphiql
 
+GET        /demo/graph           controllers.DemoController.graph
+
 # Map static resources from the /public folder to the /assets URL path
 # doesn't wok? GET        /webjars/*file        controllers.WebJarAssets.at(file)
 GET        /assets/*file         controllers.Assets.versioned(path="/public", file: Asset)

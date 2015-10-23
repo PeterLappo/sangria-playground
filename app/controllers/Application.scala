@@ -33,6 +33,7 @@ class Application @Inject() (system: ActorSystem) extends Controller {
     Ok(views.html.angular())
   }
 
+
   def graphiql = Action {
     Ok(views.html.graphiql())
   }
