@@ -12,6 +12,7 @@ GET        /render-schema        controllers.Application.renderSchema
 GET        /graphiql             controllers.Application.graphiql
 
 GET        /demo/graph           controllers.DemoController.graph
+GET        /demo/mockgraph       controllers.DemoController.mockgraph
 
 # Map static resources from the /public folder to the /assets URL path
 # doesn't wok? GET        /webjars/*file        controllers.WebJarAssets.at(file)

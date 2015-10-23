@@ -11,12 +11,14 @@ val titanVerson = "1.0.0"
 // for webjars see http://www.webjars.org
 
 libraryDependencies ++= Seq(
+  ws,
   "com.thinkaurelius.titan" % "titan-cassandra" % titanVerson,
   "com.thinkaurelius.titan" % "titan-core" % titanVerson,
   "org.apache.tinkerpop" % "gremlin-core" % tinkerVersion,
   "org.apache.tinkerpop" % "tinkergraph-gremlin" % tinkerVersion,
   "com.tinkerpop.gremlin" % "gremlin-scala" % "1.5",
   "org.sangria-graphql" %% "sangria" % "0.4.1",
+  //"uk.gov.hmrc" %% "http-verbs" % "3.0.0",
   "org.webjars" % "jquery" % "2.1.4",
   "org.webjars" % "d3js" % "3.5.6",
   "org.webjars" % "angularjs"            % "1.4.7",
@@ -32,6 +34,8 @@ libraryDependencies ++= Seq(
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
 resolvers += "Apache public" at "https://repository.apache.org/content/groups/public/"
+
+//resolvers += Resolver.bintrayRepo("hmrc", "releases")
 
 routesGenerator := InjectedRoutesGenerator
 
