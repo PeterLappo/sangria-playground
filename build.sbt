@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
   "org.apache.tinkerpop" % "tinkergraph-gremlin" % tinkerVersion,
   "com.tinkerpop.gremlin" % "gremlin-scala" % "1.5",
   "org.sangria-graphql" %% "sangria" % "0.4.1",
-  //"uk.gov.hmrc" %% "http-verbs" % "3.0.0",
+  "org.json4s" %% "json4s-native" % "3.3.0",
   "org.webjars" % "jquery" % "2.1.4",
   "org.webjars" % "d3js" % "3.5.6",
   "org.webjars" % "angularjs"            % "1.4.7",
